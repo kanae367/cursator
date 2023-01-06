@@ -175,6 +175,12 @@ a{
     left: -54px;
 }
 
+@media screen and (min-width: 376px) and (max-width: 833px){
+    .about__picture{
+        display: none;
+    }
+}
+
 @media screen and (min-width: 834px) {
     .about{
         padding-top: 45px;
@@ -192,11 +198,13 @@ a{
     }
 
     .about__picture{
-        position: absolute;
         width: 547px;
         height: 486px;
+        z-index: -1;
+        position: absolute;
+        left: unset;
         top: 0;
-        left: 454px;
+        right: -107px;
     }
 }
 
@@ -597,6 +605,11 @@ a{
     line-height: 20px;
     font-weight: 500;
     color: #fff;
+}
+@media screen and (min-width: 834px) and (max-width:1279px){
+    .topcourses__item-header{
+        background-image: url(images/background-834.png);
+    }
 }
 
 @media screen and (min-width: 834px) {
