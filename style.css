@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+:root{
+    --main-font: 16px;
+    --main-line-height: 19.5px;    
+}
+
 h1, h2, h3, p, ul{
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3{
+    font-size: inherit;
 }
 
 ul{
@@ -12,6 +21,17 @@ ul{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+body{
+    font-size: var(--main-font);
+    line-height: var(--main-line-height);
+}
+
+@media screen and (min-width: 1280px){
+    :root{
+        --main-font: 18px;
+    }
 }
 
 .body{
@@ -136,7 +156,7 @@ a{
 
 .about__paragraph{
     width: 32ch;
-    font-size: 16px;
+    font-size: var(--main-font);
     line-height: 23px;
     margin-bottom: 31px;
 }
@@ -223,7 +243,6 @@ a{
 
     .about__paragraph{
         width: 425px;
-        font-size: 18px;
         line-height: 26px;
         margin-bottom: 45px;
     }
@@ -291,8 +310,7 @@ a{
 
 .courses__spec{
     margin-left: 23px;
-    font-size: 16px;
-    line-height: 19.5px;
+    line-height: var(--main-line-height);
     font-weight: 500;
     margin-bottom: 102px;
 }
@@ -349,7 +367,6 @@ a{
     }
 
     .courses__spec{
-        font-size: 18px;
         line-height: 22px;
         margin-bottom: 115px;
         margin-left: 30px;
@@ -530,7 +547,6 @@ a{
 
 .topcourses__item-title{
     font-size: 16px;
-    line-height: 20px;
     font-weight: 600;
 }
 
@@ -582,7 +598,6 @@ a{
     display: flex;
     align-self: flex-start;
     font-size: 16px;
-    line-height: 20px;
     font-weight: 600;
     gap: 9px;
 }
@@ -602,10 +617,10 @@ a{
 
 .topcourses__bottom-link{
     font-size: 16px;
-    line-height: 20px;
     font-weight: 500;
     color: #fff;
 }
+
 @media screen and (min-width: 834px) and (max-width:1279px){
     .topcourses__item-header{
         background-image: url(images/background-834.png);
@@ -676,6 +691,7 @@ a{
         padding-left: 55px;
         padding-right: 55px;
     }
+
     .section-title{
         font-size: 28px;
         line-height: 34px;
@@ -697,14 +713,8 @@ a{
         flex-direction: row;
     }
 
-    .topcourses__item-title{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
     .topcourses__price{
         flex-direction: row;
-        justify-content: space-between;
     }
 
     .price-full__image{
@@ -714,7 +724,7 @@ a{
 
     .price-full__text{
         font-size: 16px;
-        line-height: 20px;
+        line-height: inherit;
     }
 
     .topcourses__link-container{
@@ -770,16 +780,16 @@ a{
     padding: 21px 0;
     padding-left: 26px;
     border: none;
+    line-height: 19.5px;
     border-radius: 14px 14px 0px 0px;
     font-size: 16px;
-    line-height: 20px;
 }
 
 .mail__button{
     padding: 21px 112px;
     background-color: #0075FF;
     color: #fff;
-    line-height: 20px;
+    line-height: 19.5px;
     border: none;
     border-radius: 0px 0px 14px 14px;
 }
@@ -916,7 +926,6 @@ a{
     margin-top: 17px;
     margin-bottom: 12px;
     font-size: 16px;
-    line-height: 20px;
     font-weight: 500;
 }
 
