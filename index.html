@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,38 +17,56 @@
                 Cursator
             </p>
             <nav class="nav">
-                <button class="nav__menu"></button>
+                <button class="nav__menu" id="nav-menu">
+                    <div class="nav__menu-texture"></div>
+                </button>
                 <ul class="nav__list">
-                    <li class="nav__list-item">
-                        <a class="nav__link" href="#">
+                    <li>
+                        <a class="nav__link" id="open-courses-btn">
                             Все курсы 
-                            <img class="nav__list-image" src="images/arrow_nav.svg" alt="стрелка">
                         </a>
                     </li>
-                    <li class="nav__list-item">
+                    <li>
                         <a class="nav__link" href="#">
                             Тест на профессию
                         </a>
                     </li>
-                    <li class="nav__list-item">
+                    <li>
                         <a class="nav__link" href="#">
                             Акции
                         </a>
                     </li>
-                    <li class="nav__list-item">
+                    <li>
                         <a class="nav__link" href="#">
                             Отзывы
                         </a>
                     </li>
+                    <div class="courses-popup">
+                        <div class="courses-popup__column">
+                            <span class="courses-popup__nav-item courses-popup__nav-item_active">Программирование</span>
+                            <span class="courses-popup__nav-item">Дизайн</span>
+                            <span class="courses-popup__nav-item">Маркетинг</span>
+                            <span class="courses-popup__nav-item">Аналитика</span>
+                            <span class="courses-popup__nav-item">Создание контента</span>
+                        </div>
+                        <div class="courses-popup__column">
+                            <a class="courses-popup__item">Программирование</a>
+                            <a class="courses-popup__item">Программирование</a>
+                            <a class="courses-popup__item">Программирование</a>
+                            <a class="courses-popup__item">Программирование</a>
+                            <a class="courses-popup__item">Программирование</a>
+                            <a class="courses-popup__item">Программирование</a>
+                        </div>
+                    </div>
                 </ul>
             </nav>
         </header>
 
-        <main class="main">
+        <main>
             <section class="about">
-                <h1 class="about__title">
+                <h2 class="about__title">
                     Найди подходящий курс
-                </h1>
+                </h2>
                 <p class="about__paragraph">
                     Мы — агрегатор-отзовик курсов. Выбирайте курсы по стоимости, длительности, дате начала и другим параметрам!
                 </p>
@@ -60,7 +78,7 @@
                         Не уверены, какую <span class="about__span">профессию</span> выбрать?
                     </p>
                 </div>
-                <img class="about__picture" src="images/about__picture.png" alt="Книги">
+                <img class="about__picture" src="images/about__picture.webp" alt="Книги">
             </section>
 
             <section class="courses">
@@ -75,7 +93,7 @@
                         <h3 class="courses__spec">
                             Программирование
                         </h3>
-                        <img class="courses__image" src="images/Programmer-pana.svg" alt="программирование">
+                        <img class="courses__image" src="images/Programmer-pana.webp" alt="программирование">
                     </a>
 
                     <a class="courses__item">
@@ -85,7 +103,7 @@
                         <h3 class="courses__spec">
                             Управление
                         </h3>
-                        <img class="courses__image" src="images/Teamspirit-pana.svg" alt="управление">
+                        <img class="courses__image" src="images/Teamspirit-pana.webp" alt="управление">
                     </a>
                     
                     <a class="courses__item">
@@ -95,7 +113,7 @@
                         <h3 class="courses__spec">
                             Дизайн
                         </h3>
-                        <img class="courses__image" src="images/Griddesign-pana.svg" alt="дизайн">
+                        <img class="courses__image" src="images/Griddesign-pana.webp" alt="дизайн">
                     </a>
 
                     <a class="courses__item">
@@ -105,7 +123,7 @@
                         <h3 class="courses__spec">
                             Маркетинг
                         </h3>
-                        <img class="courses__image" src="images/MobileMarketing-pana.svg" alt="мобильный маркетинг">
+                        <img class="courses__image" src="images/MobileMarketing-pana.webp" alt="мобильный маркетинг">
                     </a>
 
                     <a class="courses__item">
@@ -115,7 +133,7 @@
                         <h3 class="courses__spec">
                             Аналитика
                         </h3>
-                        <img class="courses__image" src="images/SocialDashboard-pana.svg" alt="аналитика">
+                        <img class="courses__image" src="images/SocialDashboard-pana.webp" alt="аналитика">
                     </a>
                     
                     <a class="courses__item">
@@ -125,7 +143,7 @@
                         <h3 class="courses__spec">
                             Создание контента
                         </h3>
-                        <img class="courses__image" src="images/Content-pana.svg" alt="контент">
+                        <img class="courses__image" src="images/Content-pana.webp" alt="контент">
                     </a>
                 </div>
             </section>
@@ -136,49 +154,49 @@
                 </h2>
                 <div class="main-container">
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_netologia" src="images/netolog.svg" alt="Нетология">
+                        <img src="images/netolog.webp" alt="Нетология">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_skillbox" src="images/skillbox.svg" alt="skillbox">
+                        <img src="images/skillbox.webp" alt="skillbox">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_coursera" src="images/coursera.svg" alt="coursera">
+                        <img src="images/coursera.webp" alt="coursera">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_geekbrains" src="images/geekbrains.svg" alt="geekbrains">
+                        <img src="images/geekbrains.png" alt="geekbrains">
                     </a>
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_netologia" src="images/netolog.svg" alt="Нетология">
-                    </a>
-
-                    <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_skillbox" src="images/skillbox.svg" alt="skillbox">
+                        <img src="images/netolog.webp" alt="Нетология">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_coursera" src="images/coursera.svg" alt="coursera">
+                        <img src="images/skillbox.webp" alt="skillbox">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_geekbrains" src="images/geekbrains.svg" alt="geekbrains">
-                    </a>
-                    <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_netologia" src="images/netolog.svg" alt="Нетология">
+                        <img src="images/coursera.webp" alt="coursera">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_skillbox" src="images/skillbox.svg" alt="skillbox">
+                        <img src="images/geekbrains.png" alt="geekbrains">
+                    </a>
+                    <a class="schools__item" href="#">
+                        <img src="images/netolog.webp" alt="Нетология">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_coursera" src="images/coursera.svg" alt="coursera">
+                        <img src="images/skillbox.webp" alt="skillbox">
                     </a>
 
                     <a class="schools__item" href="#">
-                        <img class="schools__image schools__image_geekbrains" src="images/geekbrains.svg" alt="geekbrains">
+                        <img src="images/coursera.webp" alt="coursera">
+                    </a>
+
+                    <a class="schools__item" href="#">
+                        <img src="images/geekbrains.png" alt="geekbrains">
                     </a>
                 </div>
             </section>
@@ -188,12 +206,19 @@
                     <h2 class="section-title">
                         Топ курсов
                     </h2>
-                    <a class="topcourses__link" href="#">
-                        <p class="topcourses__link-text">
+                    <div class="topcourses__filter" href="#">
+                        <p class="topcourses__filter-text">
                             Программирование
                         </p>
-                        <img class="topcourses__arrow" src="images/arrow_nav.svg" alt="стрелка">
-                    </a>
+                        <ul class="topcourses__filter-select hidden">
+                            <li class="topcourses__filter-item">Программирование</li>
+                            <li class="topcourses__filter-item">Управление</li>
+                            <li class="topcourses__filter-item">Дизайн</li>
+                            <li class="topcourses__filter-item">Маркетинг</li>
+                            <li class="topcourses__filter-item">Аналитика</li>
+                            <li class="topcourses__filter-item">Создание контента</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="topcourses__container">
                     <article class="topcourses__item">
@@ -258,11 +283,9 @@
                                     От 2 777 ₽/мес
                                 </p>
                             </div>
-                            <div class="topcourses__link-container">
-                                <a class="topcourses__bottom-link" href="#">
-                                    Курс на gb.ru
-                                </a>
-                            </div>
+                            <a class="topcourses__bottom" href="#">
+                                Курс на gb.ru
+                            </a>
                         </div>
                     </article>
 
@@ -328,11 +351,9 @@
                                     От 2 777 ₽/мес
                                 </p>
                             </div>
-                            <div class="topcourses__link-container">
-                                <a class="topcourses__bottom-link" href="#">
-                                    Курс на gb.ru
-                                </a>
-                            </div>
+                            <a class="topcourses__bottom" href="#">
+                                Курс на gb.ru
+                            </a>
                         </div>
                     </article>
 
@@ -398,11 +419,9 @@
                                     От 2 777 ₽/мес
                                 </p>
                             </div>
-                            <div class="topcourses__link-container">
-                                <a class="topcourses__bottom-link" href="#">
-                                    Курс на gb.ru
-                                </a>
-                            </div>
+                            <a class="topcourses__bottom" href="#">
+                                Курс на gb.ru
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -415,13 +434,13 @@
                 <h2 class="mail__title">
                     Подпишитесь на email рассылку
                 </h2>
-                <div class="mail__container">
-                    <input class="mail__form" type="email" name="email" placeholder="Ваш email">
+                <form class="mail__container">
+                    <input class="mail__form" type="email" name="email" required placeholder="Ваш email">
                     <button class="mail__button" type="submit">
                         Подписаться
                     </button>
-                </div>
-                <img class="mail__image" src="images/mail.png" alt="рассылка">
+                </form>
+                <img class="mail__image" src="images/mail.webp" alt="рассылка">
                 <div class="mail__circle"></div>
             </section>
 
@@ -431,15 +450,12 @@
                         Блог
                     </h2>
                     <a class="blog__link" href="">
-                        <p>
-                            Смотреть все
-                        </p>
-                        <img class="blog__arrow" src="images/arrow-blog.svg" alt="стрелка">
+                        Смотреть Все
                     </a>
                 </div>
                 <div class="blog__container">
                     <article class="blog__item">
-                        <img class="blog__image" src="images/python-blog.png" alt="python">
+                        <img class="blog__image" src="images/python-blog.webp" alt="python">
                         <h3 class="blog__title">
                             Профессия «Python разработчик»
                         </h3>
@@ -447,15 +463,12 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
                         </p>
                         <a class="blog__link" href="#">
-                            <p>
-                                Читать
-                            </p>
-                            <img class="blog__arrow" src="images/arrow-blog.svg" alt="стрелка">
+                            Читать
                         </a>
                     </article>
 
                     <article class="blog__item">
-                        <img class="blog__image" src="images/python-blog.png" alt="python">
+                        <img class="blog__image" src="images/python-blog.webp" alt="python">
                         <h3 class="blog__title">
                             Профессия «Python разработчик»
                         </h3>
@@ -463,15 +476,12 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
                         </p>
                         <a class="blog__link" href="#">
-                            <p>
-                                Читать
-                            </p>
-                            <img class="blog__arrow" src="images/arrow-blog.svg" alt="стрелка">
+                            Читать
                         </a>
                     </article>
 
                     <article class="blog__item">
-                        <img class="blog__image" src="images/python-blog.png" alt="python">
+                        <img class="blog__image" src="images/python-blog.webp" alt="python">
                         <h3 class="blog__title">
                             Профессия «Python разработчик»
                         </h3>
@@ -479,15 +489,12 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
                         </p>
                         <a class="blog__link" href="#">
-                            <p>
-                                Читать
-                            </p>
-                            <img class="blog__arrow" src="images/arrow-blog.svg" alt="стрелка">
+                            Читать
                         </a>
                     </article>
 
                     <article class="blog__item">
-                        <img class="blog__image" src="images/python-blog.png" alt="python">
+                        <img class="blog__image" src="images/python-blog.webp" alt="python">
                         <h3 class="blog__title">
                             Профессия «Python разработчик»
                         </h3>
@@ -509,14 +516,30 @@
             <div class="footer__container">
                 <img class="footer__logo" src="images/logo.svg" alt="Cursator">
                 <div class="footer__socials">
-                    <img class="footer__icon" src="images/telegramm.svg" alt="telegramm">
-                    <img class="footer__icon" src="images/twitter.svg" alt="twitter">
-                    <img class="footer__icon" src="images/skype.svg" alt="skype">
-                    <img class="footer__icon" src="images/ok.svg" alt="ok">
-                    <img class="footer__icon" src="images/facebook.svg" alt="facebook">
-                    <img class="footer__icon" src="images/vk.svg" alt="vk">
-                    <img class="footer__icon" src="images/watsapp.svg" alt="whatsapp">
-                    <img class="footer__icon" src="images/viber.svg" alt="viber">
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/telegramm.svg" alt="telegramm">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/twitter.svg" alt="twitter">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/skype.svg" alt="skype">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/ok.svg" alt="ok">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/vk.svg" alt="vk">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/watsapp.svg" alt="whatsapp">
+                    </a>
+                    <a href="#"> 
+                        <img class="footer__icon" src="images/viber.svg" alt="viber">
+                    </a>
                 </div>
             </div>
             <div class="footer__container">
@@ -532,10 +555,7 @@
                     </a>
                 </div>
                 <a class="footer__return" href="#">
-                    <p class="footer__return-text">
-                        В начало
-                    </p>
-                    <img class="footer__image" src="images/return.svg" alt="стрелка">
+                    В начало
                 </a>
             </div>
             <div class="footer__container">
@@ -550,5 +570,56 @@
                 </a>
             </div>
         </footer>
+
+        <div class="nav-popup">
+            <div class="nav-popup__title-container">
+                <h1 class="nav-popup__title">Cursator</h1>
+                <img id='close-btn' src="images/close-icon.svg" alt="Крестик">
+            </div>
+            <div class="nav-popup__list">
+                <a href="#">
+                    Тест на профессию
+                </a>
+                <a href="#">
+                    Акции
+                </a>
+                <a href="#">
+                    Отзывы
+                </a>
+            </div>
+            <ul class="nav-popup__list">
+                <li class="nav-popup__courses-item">
+                    Программирование
+                </li>
+                <li class="nav-popup__courses-item">
+                    Управление
+                </li>
+                <li class="nav-popup__courses-item">
+                    Дизайн
+                </li>
+                <li class="nav-popup__courses-item">
+                    Маркетинг
+                </li>
+                <li class="nav-popup__courses-item">
+                    Аналитика
+                </li>
+                <li class="nav-popup__courses-item">
+                    Создание контента
+                </li>
+            </ul>
+            <div class="nav-popup__links ">
+                <div class="back">Назад</div>
+                <ul class="nav-popup__list">
+                    <li class="courses-popup__item">Программирование</li>
+                    <li class="courses-popup__item">Программирование</li>
+                    <li class="courses-popup__item">Программирование</li>
+                    <li class="courses-popup__item">Программирование</li>
+                    <li class="courses-popup__item">Программирование</li>
+                    <li class="courses-popup__item">Программирование</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
     </body>
 </html>
