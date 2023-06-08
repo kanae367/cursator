@@ -1,6 +1,6 @@
 # Cursator
 
-The goal of the Coursator website is to help people find the best educational courses in the Russian segment.
+The goal of the Cursator website is to help people find the best educational courses in the Russian segment.
 
 ## Functionality of the project
 
