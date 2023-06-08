@@ -1,21 +1,16 @@
 (() => {
-    const openCoursesBtn = document.getElementById('open-courses-btn');
-    openCoursesBtn.addEventListener('click', (evt) => {
-        evt.target.closest('.nav__list').classList.toggle('nav__list_active');
-    });
-
     const navPopup = document.querySelector('.nav-popup');
 
+    const openCoursesBtn = document.getElementById('open-courses-btn');
+    openCoursesBtn.addEventListener('click', (evt) =>  evt.target.closest('.nav__list').classList.toggle('nav__list_active'));
+    
     const closeNavPopupBtn = navPopup.querySelector('#close-btn');
-    closeNavPopupBtn.addEventListener('click', (e) => {
-        e.target.closest('.nav-popup').classList.remove('nav-popup_active');
-    });
+    closeNavPopupBtn.addEventListener('click', () =>  navPopup.classList.remove('nav-popup_active'));
 
     const openNavPopupBtn = document.getElementById('nav-menu');
-    openNavPopupBtn.addEventListener('click', () => {
-        navPopup.classList.add('nav-popup_active');
-    });
+    openNavPopupBtn.addEventListener('click', () => navPopup.classList.add('nav-popup_active'));
 
+    //change courses links
     const coursesNav = document.querySelectorAll('.courses-popup__nav-item');
     const coursesLinks = document.querySelectorAll('.courses-popup__item');
 
@@ -29,16 +24,13 @@
         links.forEach(item => item.textContent = currentFilter);
     }
 
-    coursesNav.forEach(item => {
-        item.addEventListener('click', () => {
-            switchActive(item);
-            applyFilter(item, coursesLinks);
-        })
-    })
+    coursesNav.forEach(item => item.addEventListener('click', () => {
+        switchActive(item);
+        applyFilter(item, coursesLinks);
+    }));
 
+    //change courses in nav
     const navPopupList = navPopup.querySelector('ul.nav-popup__list');
-    
-    
     const navPopupFilterElements = navPopup.querySelectorAll('.nav-popup__courses-item');
     const filteredCourses = navPopup.querySelectorAll('.courses-popup__item');
 
@@ -54,18 +46,19 @@
         navPopupList.classList.remove('nav-popup__list_active');
     })
 
-    const closeSelectPopup = evt => {
-        evt.target.closest('.topcourses__filter').classList.toggle('topcourses__filter_active');
-    }
-
+    //select courses
     const selectCoursesBtn = document.querySelector('.topcourses__filter-text');
     selectCoursesBtn.addEventListener('click', closeSelectPopup)
-
+    
     const filterElements = document.querySelectorAll('.topcourses__filter-item');
     filterElements.forEach(item => {
         item.addEventListener('click', evt => {
             selectCoursesBtn.textContent = item.textContent;
             closeSelectPopup(evt);
         });
-    })
+    });
+
+    function closeSelectPopup(evt){
+        evt.target.closest('.topcourses__filter').classList.toggle('topcourses__filter_active');
+    };
 })()

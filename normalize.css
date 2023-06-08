@@ -11,20 +11,6 @@ main {
   display: block;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-a {
-  background-color: transparent;
-}
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
 
 small {
   font-size: 80%;
@@ -41,6 +27,25 @@ textarea {
   margin: 0; /* 2 */
 }
 
+
+h1, h2, h3, p, ul{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3{
+  font-size: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
 
 button,
 select { /* 1 */
