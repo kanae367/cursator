@@ -206,6 +206,7 @@ body{
         display: block;
         width: max(100%, 475px);
         margin-top: 60px;
+        height: auto;
     }
 }  
 
@@ -478,10 +479,16 @@ body{
     display: flex;
     gap: 11px;
     align-items: center;
+    transition: .4s all linear;
+}
+
+.topcourses__filter-text:hover{
+    opacity: .6;
 }
 
 .topcourses__filter-text::after{
     content: url(images/arrow_nav.svg);
+    line-height: 0;
 }
 
 .topcourses__filter{
@@ -519,6 +526,12 @@ body{
     padding: 10px 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    transition: all .4s;
+}
+
+.topcourses__filter-item:hover{
+    background-color: #0075FF;
+    color: white;
 }
 
 .topcourses__container{
@@ -643,6 +656,12 @@ body{
     border-radius: 0 0 19px 19px;
 }
 
+@media screen and (min-width: 834px) and (max-width: 1280px) {
+    .topcourses__item{
+        flex: 0 0 30%;
+    }
+}
+
 @media screen and (min-width: 834px) {
     .topcourses__header{
         flex-direction: row;
@@ -655,9 +674,6 @@ body{
         gap: 12px;
     }
 
-    .topcourses__item{
-        width: 240px;
-    }
 
     .tag{
         display: block;
@@ -960,6 +976,12 @@ body{
     display: none;
 }
 
+@media screen and (min-width: 834px) and (max-width: 1280px) {
+    .blog__item{
+        flex: 0 0 30%;
+    }    
+}
+
 @media screen and (min-width: 834px){
     .blog{
         padding-top: 106px;
@@ -970,9 +992,6 @@ body{
         gap: 13px;
     }
 
-    .blog__item{
-        width: 239px;
-    }
 
     .blog__text{
         width: 200px;
